@@ -21,7 +21,7 @@ const Card: React.FC<CardProps> = ({image, tack, message}) => {
         flexDirection: 'column',
         justifyContent: "center",
         alignItems: 'center',
-        
+        padding: '20px'
         
     }}>
       <img src={image} style={{width: '30%'}} alt="IMAGE WIll DISPLAY" />
