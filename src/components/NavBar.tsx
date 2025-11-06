@@ -35,12 +35,12 @@ const NavBar = () => {
             fontWeight: 'bold',
             cursor: 'pointer',
         }}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Skills</li>
-            <li>Others</li>
-            <li>Contact</li>
+            <li><a style={{textDecoration: 'none', color: 'white'}} href="#home">Home</a></li>
+            <li><a style={{textDecoration: 'none', color: 'white'}} href="#about">About</a></li>
+            <li><a style={{textDecoration: 'none', color: 'white'}} href="#services">Services</a></li>
+            <li><a style={{textDecoration: 'none', color: 'white'}} href="#skills">Skills</a></li>
+            <li><a style={{textDecoration: 'none', color: 'white'}} href="#otherskills">Others</a></li>
+            <li><a style={{textDecoration: 'none', color: 'white'}} href="#contact">Contact</a></li>
         </ul>
     </div>
   )

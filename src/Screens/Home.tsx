@@ -103,7 +103,7 @@ const Home = () => {
       <NavBar />
 
       <div
-        id="main"
+        id="home"
         style={{
           // backgroundColor: 'lightpink',
           backgroundImage: `url(${Background})`,
@@ -162,7 +162,7 @@ const Home = () => {
               height: "25%",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center",
+              justifyContent: "end",
               alignItems: "center",
               fontSize: "2rem",
             }}
@@ -218,6 +218,7 @@ const Home = () => {
       </div>
 
       <div
+      id="services"
         className="services"
         style={{
           width: "100vw",
@@ -278,6 +279,7 @@ const Home = () => {
       </div>
 
       <div
+      id="skills"
         className="skills"
         style={{
           width: "100vw",
@@ -369,6 +371,7 @@ const Home = () => {
       </div>
 
       <div
+      id="otherskills"
         className="otherskills"
         style={{
           height: "100vh",
@@ -430,6 +433,7 @@ const Home = () => {
       </div>
 
       <div
+      id="contact"
         className="contact"
         style={{
           width: "100vw",
