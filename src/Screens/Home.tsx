@@ -20,6 +20,8 @@ import javascriptLogo from './../assets/javascript logo.jpeg';
 const Home = () => {
     const [first, setFirst] = useState(true);
 
+    setInterval(handleChange , 2000);
+
     function handleChange(){
       if(first){
         setFirst(false);
