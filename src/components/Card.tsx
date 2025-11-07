@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({image, tack, message}) => {
         padding: '20px'
         
     }}>
-      <img src={image} style={{width: '30%'}} alt="IMAGE WIll DISPLAY" />
+      <img src={image} style={{width: '40%' , border: '3px solid white' , borderRadius: '50%'}} alt="IMAGE WIll DISPLAY" />
       <h2 style={{padding: '15px 0px'}}>{tack}</h2>
       <p style={{textAlign: 'center'}}>{message}</p>
 

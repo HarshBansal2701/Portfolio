@@ -478,7 +478,7 @@ const Home = () => {
               style={{
                 // border: '1px solid black',
                 height: "80%",
-                width: "30%",
+                width: "40%",
                 padding: "20px",
               }}
             >
@@ -505,28 +505,29 @@ const Home = () => {
             <div
               className="ContactRight"
               style={{
-                border: "1px solid black",
+                // border: "1px solid black",
                 height: "80%",
-                width: "30%",
+                width: "40%",
                 padding: "20px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-start",
+                // display: "flex",
+                // flexDirection: "column",
+                // justifyContent: "flex-start",
               }}
             >
               <h2 style={{ paddingBottom: "15px" }}>Message me</h2>
               <div
                 style={{
-                  display: "flex",
-                  height: "50%",
-                  flexDirection: "column",
-                  justifyContent: "space-evenly",
+                  // display: "flex",
+                  height: "67%",
+                  // flexDirection: "column",
+                  // justifyContent: "space-evenly",
                 }}
               >
-                <input type="text" size={10} placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="text" placeholder="Subject" />
-                <input type="text" placeholder="Message" />
+                <input type="text" style={{width: '45%',padding: '10px', height: '40px', marginRight: '20px'  ,fontSize: '1.3rem', border: '2px solid grey' ,borderRadius: '5px'}} placeholder="Name" />
+
+                <input type="email" style={{width: '45%', height: '40px',padding: '10px',fontSize: '1.3rem', border: '2px solid grey' ,borderRadius: '5px'}} placeholder="Email" />
+                <input type="text" style={{width: '94%', height: '40px',padding: '10px', margin: '20px 0px' , fontSize: '1.3rem', border: '2px solid grey' ,borderRadius: '5px'}} placeholder="Subject" />
+                <input type="text" style={{width: '94%', height: '80px',padding: '10px', fontSize: '1.3rem', border: '2px solid grey' ,borderRadius: '5px'}} placeholder="Message" />
               </div>
               <Button message="Send message"></Button>
             </div>
