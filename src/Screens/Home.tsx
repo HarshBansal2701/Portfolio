@@ -10,125 +10,81 @@ import Range from "../components/Range";
 import webDesignImage from "./../assets/paintbrush-solid-full.svg";
 import advertisingImage from "./../assets/chart-simple-solid-full.svg";
 import appDesignImage from "./../assets/code-solid-full.svg";
-import cppLogo from './../assets/cpp.jpg';
-import dsaLogo from './../assets/DSA_Logo.png';
-import reactLogo from './../assets/react logo.png';
-import htmlLogo from './../assets/html logo.png';
-import cssLogo from './../assets/css logo.png';
-import javascriptLogo from './../assets/javascript logo.jpeg';
+import cppLogo from "./../assets/cpp.jpg";
+import dsaLogo from "./../assets/DSA_Logo.png";
+import reactLogo from "./../assets/react logo.png";
+import htmlLogo from "./../assets/html logo.png";
+import cssLogo from "./../assets/css logo.png";
+import javascriptLogo from "./../assets/javascript logo.jpeg";
+import "./../App.css";
 
 const Home = () => {
-    const [first, setFirst] = useState(true);
+  const [first, setFirst] = useState(true);
 
-    setInterval(handleChange , 2000);
+  setInterval(handleChange, 2000);
 
-    function handleChange(){
-      if(first){
-        setFirst(false);
-      }
-      else{
-        setFirst(true);
-      }
-
+  function handleChange() {
+    if (first) {
+      setFirst(false);
+    } else {
+      setFirst(true);
     }
+  }
 
-    let otherSkillContent;
-    if(first){
-      otherSkillContent = <div
-          className="otherskillscrausal"
-          style={{
-            // border: "1px solid white",
-            width: "100%",
-            height: "65%",
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
-          <Card
-            image ={htmlLogo}
-            tack="HTML5"
-            message="The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser."
-          />
-          <Card
-            image={cssLogo}
-            tack="CSS"
-            message="The Cascading Style Sheets, or CSS, is the standard style language used to describe the visual presentation and layout of web pages in browsers."
-          />
-          <Card
-            image={javascriptLogo}
-            tack="JavaScript"
-            message="The JavaScript programming language is widely used to create dynamic and interactive web pages, enabling real-time updates, animations, and event-driven functionality within browsers."
-          />
-          
-        </div>
-    }
-    else{
-      otherSkillContent = <div
-          className="otherskillscrausal"
-          style={{
-            // border: "1px solid white",
-            width: "100%",
-            height: "65%",
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
-          <Card
-            image={cppLogo}
-            tack="CPP"
-            message="The C++ programming language is a powerful, high-performance language widely used for system software, game development, embedded systems, and performance-critical applications across platforms."
-          />
-          <Card
-            image={dsaLogo}
-            tack="DSA"
-            message="Data Structures and Algorithms, or DSA, form the foundation of efficient programming, helping developers organize data, solve complex problems, and optimize program performance."
-          />
-          <Card
-            image={reactLogo}
-            tack="React.js"
-            message="The React library, developed by Facebook, is a powerful JavaScript framework for building user interfaces using reusable components and efficient virtual DOM rendering."
-          />
-          
-        </div>
-    }
+  let otherSkillContent;
+  if (first) {
+    otherSkillContent = (
+      <div className="otherskillscrausal">
+        <Card
+          image={htmlLogo}
+          tack="HTML5"
+          message="The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser."
+        />
+        <Card
+          image={cssLogo}
+          tack="CSS"
+          message="The Cascading Style Sheets, or CSS, is the standard style language used to describe the visual presentation and layout of web pages in browsers."
+        />
+        <Card
+          image={javascriptLogo}
+          tack="JavaScript"
+          message="The JavaScript programming language is widely used to create dynamic and interactive web pages, enabling real-time updates, animations, and event-driven functionality within browsers."
+        />
+      </div>
+    );
+  } else {
+    otherSkillContent = (
+      <div className="otherskillscrausal">
+        <Card
+          image={cppLogo}
+          tack="CPP"
+          message="The C++ programming language is a powerful, high-performance language widely used for system software, game development, embedded systems, and performance-critical applications across platforms."
+        />
+        <Card
+          image={dsaLogo}
+          tack="DSA"
+          message="Data Structures and Algorithms, or DSA, form the foundation of efficient programming, helping developers organize data, solve complex problems, and optimize program performance."
+        />
+        <Card
+          image={reactLogo}
+          tack="React.js"
+          message="The React library, developed by Facebook, is a powerful JavaScript framework for building user interfaces using reusable components and efficient virtual DOM rendering."
+        />
+      </div>
+    );
+  }
 
   return (
-    <div
-      style={{
-        // border:'2px black solid',
-        height: "100vh",
-        width: "100vw",
-      }}
-    >
+    <div className="home">
       <NavBar />
 
       <div
         id="home"
         style={{
-          // backgroundColor: 'lightpink',
           backgroundImage: `url(${Background})`,
-          //   backgroundPosition: 'fixed',
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          objectFit: "fill",
-          height: "100vh",
-          width: "100vw",
         }}
       >
-        <div
-          style={{
-            width: "50vw",
-            position: "relative",
-            top: "40%",
-            left: "15%",
-            fontSize: "2.5rem",
-            color: "white",
-            textShadow: "2px 2px 8px black",
-          }}
-        >
+        <div className="homeContent">
           <p>Hello, Myself</p>
           <h1>Harsh Bansal</h1>
           <p>
@@ -138,74 +94,21 @@ const Home = () => {
         </div>
       </div>
 
-      <div
-        className="about"
-        id="about"
-        style={{
-          //   backgroundColor: "darkred",
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
-      >
-        <div
-          style={{
-            // border: '3px solid white',
-            height: "100%",
-            justifyItems: "center",
-          }}
-        >
-          <div
-            className="aboutText"
-            style={{
-              // border: '3px solid cyan',
-              width: "100%",
-              height: "25%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "end",
-              alignItems: "center",
-              fontSize: "2rem",
-            }}
-          >
+      <div id="about">
+        <div className="about">
+          <div className="aboutText">
             <h2>About me</h2>
-            <p style={{ fontWeight: "bold" }}>
-              ---- <span style={{ color: "darkred" }}>who i am</span> ----
+            <p>
+              ---- <span>who i am</span> ----
             </p>
           </div>
 
-          <div
-            className="aboutDescription"
-            style={{
-              // border: "3px solid grey",
-              width: "100%",
-              height: "65%",
-              display: "flex",
-              justifyContent: "space-around",
-              alignItems: "center",
-            }}
-          >
-            <img
-              style={{
-                width: "20%",
-                marginLeft: "10%",
-              }}
-              src={Mypic}
-              alt="Myimage"
-            />
+          <div className="aboutDescription">
+            <img src={Mypic} alt="Myimage" />
 
             <div className="aboutContent">
-              <h3 style={{ fontSize: "1.8rem" }}>
-                My self Harsh and i'm Coder
-              </h3>
-              <p
-                style={{
-                  width: "30vw",
-                  fontSize: "1.2rem",
-                  margin: "5%  0",
-                }}
-              >
+              <h3>My self Harsh and i'm Coder</h3>
+              <p>
                 I’m currently in the 3rd year of my Bachelor in Technology from
                 Galgotias University in computer science. Also I am very
                 dedicated person,passionate about coding, goal-oriented
@@ -219,48 +122,15 @@ const Home = () => {
         </div>
       </div>
 
-      <div
-      id="services"
-        className="services"
-        style={{
-          width: "100vw",
-          height: "100vh",
-          backgroundColor: "black",
-          color: "white",
-        }}
-      >
-        <div
-          className="myservices"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <div
-            className="servicesText"
-            style={{
-              height: "25%",
-              width: "100%",
-              justifyItems: "center",
-              alignContent: "end",
-              fontSize: "1.7rem",
-            }}
-          >
+      <div id="services">
+        <div className="myservices">
+          <div className="servicesText">
             <h2>My Services</h2>
             <p>
-              -- <span style={{ color: "darkred" }}>what i provide</span> --
+              -- <span>what i provide</span> --
             </p>
           </div>
-          <div
-            className="sercicesCards"
-            style={{
-              height: "70%",
-              width: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-evenly",
-            }}
-          >
+          <div className="sercicesCards">
             <Card
               image={webDesignImage}
               tack="Web Design"
@@ -280,65 +150,18 @@ const Home = () => {
         </div>
       </div>
 
-      <div
-      id="skills"
-        className="skills"
-        style={{
-          width: "100vw",
-          height: "100vh",
-        }}
-      >
-        <div
-          className="myskills"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <div
-            className="skillText"
-            style={{
-              // border: '1px red solid',
-              width: "100%",
-              height: "25%",
-              justifyItems: "center",
-              alignContent: "end",
-              fontSize: "1.7rem",
-            }}
-          >
+      <div id="skills" className="skills">
+        <div className="myskills">
+          <div className="skillText">
             <h2>My Skills</h2>
             <p>
-              -- <span style={{ color: "darkred" }}>what i know</span> --
+              -- <span>what i know</span> --
             </p>
           </div>
-          <div
-            className="skillCard"
-            style={{
-              width: "100%",
-              height: "65%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <div
-              className="skillLeft"
-              style={{
-                // border: '1px solid black',
-                height: "80%",
-                width: "40%",
-                padding: "10px",
-              }}
-            >
-              <h2 style={{ paddingBottom: "10px" }}>
-                My creative skills & experiences.
-              </h2>
-              <p
-                style={{
-                  fontSize: "1.2rem",
-                  paddingBottom: "15px",
-                }}
-              >
+          <div className="skillCard">
+            <div className="skillLeft">
+              <h2>My creative skills & experiences.</h2>
+              <p>
                 I don't have any experiences yet but this is my first resposive
                 website(avi thoda work r krna h ispe). Also I have been
                 tinkering with code since my first year. I love working on web
@@ -349,19 +172,7 @@ const Home = () => {
               </p>
               <Button message="Read more" />
             </div>
-            <div
-              className="skillRight"
-              style={{
-                // border: '1px solid black',
-                height: "80%",
-                width: "40%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                // alignItems: "center"
-                padding: "1% 0px",
-              }}
-            >
+            <div className="skillRight">
               <Range name="HTML" per="90%" />
               <Range name="CSS" per="60%" />
               <Range name="JavaScript" per="80%" />
@@ -372,125 +183,41 @@ const Home = () => {
         </div>
       </div>
 
-      <div
-      id="otherskills"
-        className="otherskills"
-        style={{
-          height: "100vh",
-          width: "100vw",
-          backgroundColor: "black",
-          color: "white",
-        }}
-      >
-        <div
-          className="otherSkillText"
-          style={{
-            // border: '1px red solid',
-            width: "100%",
-            height: "25%",
-            justifyItems: "center",
-            alignContent: "end",
-            fontSize: "1.7rem",
-          }}
-        >
+      <div id="otherskills">
+        <div className="otherSkillText">
           <h2>Other Skills</h2>
           <p>
-            -- <span style={{ color: "darkred" }}>what i provide</span> --
+            -- <span>what i provide</span> --
           </p>
         </div>
-           {/* nvjkdnfkdf */}
-        {/* <div
-          className="otherskillscrausal"
-          style={{
-            // border: "1px solid white",
-            width: "100%",
-            height: "65%",
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
-          <Card
-            image="one"
-            tack="HTML5"
-            message="The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser."
-          />
-          <Card
-            image="one"
-            tack="CSS"
-            message="The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser."
-          />
-          <Card
-            image="one"
-            tack="JavaScript"
-            message="The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser."
-          />
-          
-        </div> */}
         {otherSkillContent}
-        <div className="" style={{display: 'flex', width: '100%' , justifyContent: 'center'}}>
-          <button onClick={handleChange} ><span>&#129092;</span></button>
-          <button onClick={handleChange}><span>&#129094;</span></button>
+        <div className="leftRightButton">
+          <button onClick={handleChange}>
+            <span>&#129092;</span>
+          </button>
+          <button onClick={handleChange}>
+            <span>&#129094;</span>
+          </button>
         </div>
       </div>
 
-      <div
-      id="contact"
-        className="contact"
-        style={{
-          width: "100vw",
-          height: "100vh",
-        }}
-      >
-        <div
-          className="mycontact"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <div
-            className="contactText"
-            style={{
-              // border: '1px red solid',
-              width: "100%",
-              height: "25%",
-              justifyItems: "center",
-              alignContent: "end",
-              fontSize: "1.7rem",
-            }}
-          >
+      <div id="contact">
+        <div className="mycontact">
+          <div className="contactText">
             <h2>My Contact</h2>
             <p>
-              -- <span style={{ color: "darkred" }}>get in touch</span> --
+              -- <span>get in touch</span> --
             </p>
           </div>
-          <div
-            className="contactDetails"
-            style={{
-              width: "100%",
-              height: "65%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <div
-              className="contactLeft"
-              style={{
-                // border: '1px solid black',
-                height: "80%",
-                width: "40%",
-                padding: "20px",
-              }}
-            >
+          <div className="contactDetails">
+            <div className="contactLeft">
               <h2>Get in Touch</h2>
-              <p style={{ fontSize: "1.3rem", padding: "15px 0" }}>
+              <p>
                 I hope you like this, if you want to talk or suggest me
                 something then write a mail to me so that i can take action or
                 response to them. Thank you
               </p>
-              <ul style={{ listStyle: "none", fontSize: "1.4rem" }}>
+              <ul>
                 <li>
                   <h4>Name</h4> <p>Harsh Bansal</p>
                 </li>
@@ -504,32 +231,22 @@ const Home = () => {
                 </li>
               </ul>
             </div>
-            <div
-              className="ContactRight"
-              style={{
-                // border: "1px solid black",
-                height: "80%",
-                width: "40%",
-                padding: "20px",
-                // display: "flex",
-                // flexDirection: "column",
-                // justifyContent: "flex-start",
-              }}
-            >
-              <h2 style={{ paddingBottom: "15px" }}>Message me</h2>
-              <div
-                style={{
-                  // display: "flex",
-                  height: "67%",
-                  // flexDirection: "column",
-                  // justifyContent: "space-evenly",
-                }}
-              >
-                <input type="text" style={{width: '45%',padding: '10px', height: '40px', marginRight: '20px'  ,fontSize: '1.3rem', border: '2px solid grey' ,borderRadius: '5px'}} placeholder="Name" />
+            <div className="ContactRight">
+              <h2>Message me</h2>
+              <div className="contactInputs">
+                <input className="inputName" type="text" placeholder="Name" />
 
-                <input type="email" style={{width: '45%', height: '40px',padding: '10px',fontSize: '1.3rem', border: '2px solid grey' ,borderRadius: '5px'}} placeholder="Email" />
-                <input type="text" style={{width: '94%', height: '40px',padding: '10px', margin: '20px 0px' , fontSize: '1.3rem', border: '2px solid grey' ,borderRadius: '5px'}} placeholder="Subject" />
-                <input type="text" style={{width: '94%', height: '80px',padding: '10px', fontSize: '1.3rem', border: '2px solid grey' ,borderRadius: '5px'}} placeholder="Message" />
+                <input className="inputName" type="email" placeholder="Email" />
+                <input
+                  className="inputSubject"
+                  type="text"
+                  placeholder="Subject"
+                />
+                <input
+                  className="inputMessage"
+                  type="text"
+                  placeholder="Message"
+                />
               </div>
               <Button message="Send message"></Button>
             </div>

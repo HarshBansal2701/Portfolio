@@ -1,46 +1,17 @@
 import React from 'react'
+import './../App.css';
 
 const NavBar = () => {
   return (
-    <div id='navBar' style={{
-        // border: '2px black solid',
-
-        width: '100vw',
-        height: '10vh',
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        backgroundColor: 'darkred',
-        position: 'fixed',
-        zIndex: 1,
-        
-    }}>
-        <h2 style={{
-            // border: '1px black solid',
-            fontSize: '40px',
-            color : 'white',
-            textShadow: '2px 2px 4px balck'
-        }}>Harsh<span style={{color: 'red' , textShadow: '2px 2px 4px darkred'}}>Dev.</span></h2>
-        <ul style={{
-            width: '40vw',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            // border: '1px black solid',
-            color : 'white',
-            textShadow: '2px 2px 4px black',
-            textDecoration: 'none',
-            listStyle: 'none',
-            fontSize: '25px',
-            fontWeight: 'bold',
-            cursor: 'pointer',
-        }}>
-            <li><a style={{textDecoration: 'none', color: 'white'}} href="#home">Home</a></li>
-            <li><a style={{textDecoration: 'none', color: 'white'}} href="#about">About</a></li>
-            <li><a style={{textDecoration: 'none', color: 'white'}} href="#services">Services</a></li>
-            <li><a style={{textDecoration: 'none', color: 'white'}} href="#skills">Skills</a></li>
-            <li><a style={{textDecoration: 'none', color: 'white'}} href="#otherskills">Others</a></li>
-            <li><a style={{textDecoration: 'none', color: 'white'}} href="#contact">Contact</a></li>
+    <div id='navBar'>
+        <h2>Harsh<span>Dev.</span></h2>
+        <ul className='navBarRight'>
+            <li><a className='navBarList' href="#home">Home</a></li>
+            <li><a className='navBarList' href="#about">About</a></li>
+            <li><a className='navBarList' href="#services">Services</a></li>
+            <li><a className='navBarList' href="#skills">Skills</a></li>
+            <li><a className='navBarList' href="#otherskills">Others</a></li>
+            <li><a className='navBarList' href="#contact">Contact</a></li>
         </ul>
     </div>
   )
