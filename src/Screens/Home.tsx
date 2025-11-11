@@ -10,74 +10,13 @@ import Range from "../components/Range";
 import webDesignImage from "./../assets/paintbrush-solid-full.svg";
 import advertisingImage from "./../assets/chart-simple-solid-full.svg";
 import appDesignImage from "./../assets/code-solid-full.svg";
-import cppLogo from "./../assets/cpp.jpg";
-import dsaLogo from "./../assets/DSA_Logo.png";
-import reactLogo from "./../assets/react logo.png";
-import htmlLogo from "./../assets/html logo.png";
-import cssLogo from "./../assets/css logo.png";
-import javascriptLogo from "./../assets/javascript logo.jpeg";
 import "./../App.css";
+import Carousel from "../components/Carousel";
 
 const Home = () => {
-  const [first, setFirst] = useState(true);
-
-  setInterval(handleChange, 2000);
-
-  function handleChange() {
-    if (first) {
-      setFirst(false);
-    } else {
-      setFirst(true);
-    }
-  }
-
-  let otherSkillContent;
-  if (first) {
-    otherSkillContent = (
-      <div className="otherskillscrausal">
-        <Card
-          image={htmlLogo}
-          tack="HTML5"
-          message="The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser."
-        />
-        <Card
-          image={cssLogo}
-          tack="CSS"
-          message="The Cascading Style Sheets, or CSS, is the standard style language used to describe the visual presentation and layout of web pages in browsers."
-        />
-        <Card
-          image={javascriptLogo}
-          tack="JavaScript"
-          message="The JavaScript programming language is widely used to create dynamic and interactive web pages, enabling real-time updates, animations, and event-driven functionality within browsers."
-        />
-      </div>
-    );
-  } else {
-    otherSkillContent = (
-      <div className="otherskillscrausal">
-        <Card
-          image={cppLogo}
-          tack="CPP"
-          message="The C++ programming language is a powerful, high-performance language widely used for system software, game development, embedded systems, and performance-critical applications across platforms."
-        />
-        <Card
-          image={dsaLogo}
-          tack="DSA"
-          message="Data Structures and Algorithms, or DSA, form the foundation of efficient programming, helping developers organize data, solve complex problems, and optimize program performance."
-        />
-        <Card
-          image={reactLogo}
-          tack="React.js"
-          message="The React library, developed by Facebook, is a powerful JavaScript framework for building user interfaces using reusable components and efficient virtual DOM rendering."
-        />
-      </div>
-    );
-  }
-
   return (
     <div className="home">
       <NavBar />
-
       <div
         id="home"
         style={{
@@ -190,14 +129,8 @@ const Home = () => {
             -- <span>what i provide</span> --
           </p>
         </div>
-        {otherSkillContent}
-        <div className="leftRightButton">
-          <button onClick={handleChange}>
-            <span>&#129092;</span>
-          </button>
-          <button onClick={handleChange}>
-            <span>&#129094;</span>
-          </button>
+        <div className="otherSkillsCrausel">
+          <Carousel />
         </div>
       </div>
 
@@ -205,9 +138,7 @@ const Home = () => {
         <div className="mycontact">
           <div className="contactText">
             <h2>My Contact</h2>
-            <p>
-              -- <span>get in touch</span> --
-            </p>
+            <p> -- <span>get in touch</span> -- </p>
           </div>
           <div className="contactDetails">
             <div className="contactLeft">
@@ -235,18 +166,9 @@ const Home = () => {
               <h2>Message me</h2>
               <div className="contactInputs">
                 <input className="inputName" type="text" placeholder="Name" />
-
                 <input className="inputName" type="email" placeholder="Email" />
-                <input
-                  className="inputSubject"
-                  type="text"
-                  placeholder="Subject"
-                />
-                <input
-                  className="inputMessage"
-                  type="text"
-                  placeholder="Message"
-                />
+                <input className="inputSubject" type="text" placeholder="Subject" />
+                <input className="inputMessage" type="text" placeholder="Message" />
               </div>
               <Button message="Send message"></Button>
             </div>

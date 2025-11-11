@@ -1,15 +1,11 @@
 import React from 'react'
+import './../App.css';
 
 const Button = ({message}:{message: string}) => {
   return (
-    <button style={{
-      padding: '10px 20px',
-      color : 'white',
-      fontSize: '1.25rem',
-      backgroundColor: 'darkred',
-      borderRadius : '5px',
-      cursor: 'pointer',
-
+    <button className='customBtn' style={{
+      
+      
     }}>
         {message}
     </button>
