@@ -9,16 +9,28 @@
   color: whitesmoke;
 }
 
+.navScroll{
+  background-color: darkred !important;
+  height: 10vh !important;
+}
+
 #navBar {
   width: 100vw;
-  height: 10vh;
+  height: 14vh;
   position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: transparent;
+  transition-property: all;
+  transform-origin: 0;
+  transition-duration: 0.5s;
+  transition-property: all;
   z-index: 100;
 }
+
+
 
 #navBar h2 {
   font-size: 40px;

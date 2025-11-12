@@ -21,6 +21,7 @@ const Home = () => {
         id="home"
         style={{
           backgroundImage: `url(${Background})`,
+          backgroundPositionY: '0px',
         }}
       >
         <div className="homeContent">
