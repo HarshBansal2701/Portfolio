@@ -21,7 +21,7 @@ const Home = () => {
         id="home"
         style={{
           backgroundImage: `url(${Background})`,
-          backgroundPositionY: '0px',
+          backgroundPositionY: "0px",
         }}
       >
         <div className="homeContent">
@@ -139,7 +139,10 @@ const Home = () => {
         <div className="mycontact">
           <div className="contactText">
             <h2>My Contact</h2>
-            <p> -- <span>get in touch</span> -- </p>
+            <p>
+              {" "}
+              -- <span>get in touch</span> --{" "}
+            </p>
           </div>
           <div className="contactDetails">
             <div className="contactLeft">
@@ -168,8 +171,16 @@ const Home = () => {
               <div className="contactInputs">
                 <input className="inputName" type="text" placeholder="Name" />
                 <input className="inputName" type="email" placeholder="Email" />
-                <input className="inputSubject" type="text" placeholder="Subject" />
-                <input className="inputMessage" type="text" placeholder="Message" />
+                <input
+                  className="inputSubject"
+                  type="text"
+                  placeholder="Subject"
+                />
+                <input
+                  className="inputMessage"
+                  type="text"
+                  placeholder="Message"
+                />
               </div>
               <Button message="Send message"></Button>
             </div>

@@ -9,7 +9,7 @@
   color: whitesmoke;
 }
 
-.navScroll{
+.navScroll {
   background-color: darkred !important;
   height: 10vh !important;
 }
@@ -31,7 +31,7 @@
   /* border: 2px solid blue; */
 }
 
-.menuBar{
+.menuBar {
   display: none;
 }
 
@@ -72,9 +72,42 @@
   margin: 0px 10px;
 }
 
-.navBarList:hover{
+.navBarList:hover {
   color: darkred;
   transition: transform 0.1s ease-in-out;
+}
+
+.overlayNav{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlayContent{
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlayNav a{
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlayNav a:hover{
+  color: #f1f1f1;
 }
 
 .otherskillscrausal {
@@ -202,7 +235,7 @@
   padding: 20px;
 }
 
-.card:hover{
+.card:hover {
   background-color: darkred;
   font-size: 1.025rem;
   transition: transfrom 0.2s ease-out;
@@ -315,7 +348,7 @@
   color: darkred;
 }
 
-.otherSkillsCrausel{
+.otherSkillsCrausel {
   width: 100%;
   height: 75%;
   /* background-color: pink; */
@@ -412,24 +445,24 @@
   border-radius: 5px;
 }
 
-.customBtn{
+.customBtn {
   padding: 10px 20px;
-      color : white;
-      font-size: 1.25rem;
-      background-color: darkred;
-      border-radius : 5px;
-      cursor: pointer;
+  color: white;
+  font-size: 1.25rem;
+  background-color: darkred;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.customBtn:hover{
+.customBtn:hover {
   background-color: transparent;
   color: darkred;
-  transition:  0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   border: 2px solid darkred;
 }
 
 
-.carousel{
+.carousel {
   position: relative;
   width: 100%;
   height: 100%;
@@ -437,7 +470,7 @@
   padding: 40px;
 }
 
-.carouselWrapper{
+.carouselWrapper {
   width: 100%;
   padding: 0px 20px;
   display: flex;
@@ -445,7 +478,7 @@
   align-items: center;
 }
 
-.carouselContent{
+.carouselContent {
   display: flex;
   /* border: 1px solid wheat; */
   overflow-x: scroll;
@@ -453,19 +486,19 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.carouselContent::-webkit-scrollbar{
+.carouselContent::-webkit-scrollbar {
   display: none;
 }
 
-.carouselItem{
+.carouselItem {
   padding: 0px 40px;
 }
 
-.carouselBtn{
+.carouselBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   font-size: 24px;
@@ -476,270 +509,281 @@
 }
 
 
-.carouselBtn.prev{
+.carouselBtn.prev {
   left: 10px;
 }
 
-.carouselBtn.next{
+.carouselBtn.next {
   right: 10px;
 }
 
 
 @media screen and (max-width: 1024px) {
-    #navBar{
-      width: 100vw;
-    }
-    .navBarRight{
-      margin-right: 5%;
-    }
-
-.contactText {
-  height: 20%;
-}
-
-    .contactDetails{
-      height: 75%;
-    }
-
-.inputName {
-  margin-right: 10px;
-}
-}
-
-@media screen and (max-width: 768px){
-  .navBarRight{
-    display: none;
-    
+  #navBar {
+    width: 100vw;
   }
 
-  #navBar{
+  .navBarRight {
+    margin-right: 5%;
+  }
+
+  .contactText {
+    height: 20%;
+  }
+
+  .contactDetails {
+    height: 75%;
+  }
+
+  .inputName {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navBarRight {
+    display: none;
+
+  }
+
+  #navBar {
     justify-content: space-between;
     /* margin: 0px 10%; */
     padding: 0px 10%;
   }
 
-  .menuBar{
+  .menuBar {
     display: block;
     width: 40px;
     margin-right: 0px;
     align-items: end;
   }
 
-  #about{
+  #about {
     height: 150vh;
   }
 
-  .aboutText{
+  .aboutText {
     height: 15%;
     /* border: 3px solid pink; */
   }
 
-  .aboutDescription{
+  .aboutDescription {
     flex-direction: column;
   }
 
-  .aboutDescription img{
+  .aboutDescription img {
     width: 40%;
     margin: 5%;
   }
 
-  .aboutContent p{
+  .aboutContent p {
     width: 80vw;
   }
 
-  #services{
+  #services {
     height: 150vh;
   }
 
-  .servicesText{
+  .servicesText {
     height: 15%;
     align-content: center;
   }
 
-  .sercicesCards{
+  .sercicesCards {
     height: 80%;
     /* flex-direction: column; */
     align-items: space-between;
     flex-wrap: wrap;
   }
 
-  #skills{
+  #skills {
     height: 130vh;
   }
 
-  .skillText{
+  .skillText {
     height: 15%;
   }
 
-  .skillCard{
+  .skillCard {
     height: 75%;
     flex-direction: column;
     justify-content: space-evenly;
   }
 
-  .skillLeft , .skillRight{
+  .skillLeft,
+  .skillRight {
     width: 80%;
   }
 
-  .skillRight{
+  .skillRight {
     padding: 0%;
   }
 
-  #contact{
+  #contact {
     height: 150vh;
   }
 
-  .contactText{
+  .contactText {
     height: 15%;
   }
 
-  .contactDetails{
+  .contactDetails {
     height: 80%;
     flex-direction: column;
     justify-content: space-evenly;
   }
 
-  .contactLeft , .ContactRight{
+  .contactLeft,
+  .ContactRight {
     width: 90%;
   }
 
-.customBtn{
-  margin-top: 10px;
-}
+  .customBtn {
+    margin-top: 10px;
+  }
 
 }
 
 @media screen and (max-width: 610px) {
-  #services{
+  #services {
     height: 220vh;
   }
 
-  .servicesText{
+  .servicesText {
     height: 15%;
   }
-  .sercicesCards{
+
+  .sercicesCards {
     height: 80%;
   }
 
-  .homeContent{
+  .homeContent {
     font-size: 2rem;
   }
 }
 
 
 @media screen and (max-width: 465px) {
-  .homeContent{
+  .homeContent {
     /* border: 2px solid white; */
     font-size: 1.5rem;
     width: 100vw;
   }
 
-  .aboutText{
+  .overlayNav a{
+    font-size: 20px;
+  }
+  .overlayNav .closebtn{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+
+  .aboutText {
     height: 15%;
     /* border: 3px solid pink; */
   }
 
-  .aboutDescription{
+  .aboutDescription {
     flex-direction: column;
   }
 
-  .aboutDescription img{
+  .aboutDescription img {
     width: 60%;
     margin: 10%;
   }
 
-  .aboutContent p{
+  .aboutContent p {
     width: 80vw;
   }
 
-  #services{
+  #services {
     height: 220vh;
   }
 
-  .servicesText{
+  .servicesText {
     height: 15%;
     align-content: center;
   }
 
-  .sercicesCards{
+  .sercicesCards {
     height: 80%;
     flex-direction: column;
     align-items: space-between;
   }
 
-  #skills{
+  #skills {
     height: 120vh;
   }
 
-  .skillText{
+  .skillText {
     height: 15%;
   }
 
-  .skillCard{
+  .skillCard {
     height: 70%;
     flex-direction: column;
     justify-content: space-evenly;
   }
 
-  .skillLeft , .skillRight{
+  .skillLeft,
+  .skillRight {
     width: 90%;
   }
 
-  .skillRight{
+  .skillRight {
     padding: 0%;
   }
 
-  .otherSkillText{
+  .otherSkillText {
     /* border: 3px solid blue; */
     height: 20%;
-  /* align-content: center; */
-  align-items: end;
-    
+    /* align-content: center; */
+    align-items: end;
+
   }
 
-  #contact{
+  #contact {
     height: 170vh;
   }
 
-  .contactText{
+  .contactText {
     height: 15%;
   }
 
-  .contactDetails{
+  .contactDetails {
     height: 80%;
     flex-direction: column;
     justify-content: space-evenly;
   }
 
-  .contactLeft , .ContactRight{
+  .contactLeft,
+  .ContactRight {
     width: 90%;
   }
 
 
-  .contactInputs input{
+  .contactInputs input {
     width: 80%;
     height: 40px;
     padding: 10px;
     margin-bottom: 20px;
   }
 
-  .inputName{
-  margin-right: 0;
-    
-  }
-
-  .inputSubject{
-  padding: 0px;
-  margin: 0px 0px;
+  .inputName {
+    margin-right: 0;
 
   }
 
-.inputMessage {
-  padding: 0px;
+  .inputSubject {
+    padding: 0px;
+    margin: 0px 0px;
 
-}
+  }
 
+  .inputMessage {
+    padding: 0px;
 
-
-
+  }
 }
