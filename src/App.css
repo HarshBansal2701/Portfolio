@@ -28,6 +28,11 @@
   transition-duration: 0.5s;
   transition-property: all;
   z-index: 100;
+  /* border: 2px solid blue; */
+}
+
+.menuBar{
+  display: none;
 }
 
 
@@ -37,6 +42,7 @@
   color: white;
   text-shadow: 2px 2px 4px black;
   cursor: pointer;
+  /* border: 2px solid brown */
 }
 
 #navBar h2 span {
@@ -45,20 +51,25 @@
 }
 
 .navBarRight {
-  width: 40vw;
+  /* position: absolute; */
+  /* border: 2px solid green; */
+  width: 45%;
+  height: 50%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   color: white;
   text-shadow: 2px 2px 4px black;
   text-decoration: none;
   list-style: none;
-  font-size: 25px;
+  font-size: 1.5rem;
   font-weight: bold;
+  margin-right: 30px;
 }
 
 .navBarRight li {
   cursor: pointer;
+  margin: 0px 10px;
 }
 
 .navBarList:hover{
@@ -84,10 +95,10 @@
 }
 
 .homeContent {
-  width: 50vw;
+  width: 80vw;
   position: relative;
   top: 40%;
-  left: 15%;
+  left: 10%;
   font-size: 2.5rem;
   color: white;
   text-shadow: 2px 2px 8px black;
@@ -471,4 +482,264 @@
 
 .carouselBtn.next{
   right: 10px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    #navBar{
+      width: 100vw;
+    }
+    .navBarRight{
+      margin-right: 5%;
+    }
+
+.contactText {
+  height: 20%;
+}
+
+    .contactDetails{
+      height: 75%;
+    }
+
+.inputName {
+  margin-right: 10px;
+}
+}
+
+@media screen and (max-width: 768px){
+  .navBarRight{
+    display: none;
+    
+  }
+
+  #navBar{
+    justify-content: space-between;
+    /* margin: 0px 10%; */
+    padding: 0px 10%;
+  }
+
+  .menuBar{
+    display: block;
+    width: 40px;
+    margin-right: 0px;
+    align-items: end;
+  }
+
+  #about{
+    height: 150vh;
+  }
+
+  .aboutText{
+    height: 15%;
+    /* border: 3px solid pink; */
+  }
+
+  .aboutDescription{
+    flex-direction: column;
+  }
+
+  .aboutDescription img{
+    width: 40%;
+    margin: 5%;
+  }
+
+  .aboutContent p{
+    width: 80vw;
+  }
+
+  #services{
+    height: 150vh;
+  }
+
+  .servicesText{
+    height: 15%;
+    align-content: center;
+  }
+
+  .sercicesCards{
+    height: 80%;
+    /* flex-direction: column; */
+    align-items: space-between;
+    flex-wrap: wrap;
+  }
+
+  #skills{
+    height: 130vh;
+  }
+
+  .skillText{
+    height: 15%;
+  }
+
+  .skillCard{
+    height: 75%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .skillLeft , .skillRight{
+    width: 80%;
+  }
+
+  .skillRight{
+    padding: 0%;
+  }
+
+  #contact{
+    height: 150vh;
+  }
+
+  .contactText{
+    height: 15%;
+  }
+
+  .contactDetails{
+    height: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .contactLeft , .ContactRight{
+    width: 90%;
+  }
+
+.customBtn{
+  margin-top: 10px;
+}
+
+}
+
+@media screen and (max-width: 610px) {
+  #services{
+    height: 220vh;
+  }
+
+  .servicesText{
+    height: 15%;
+  }
+  .sercicesCards{
+    height: 80%;
+  }
+
+  .homeContent{
+    font-size: 2rem;
+  }
+}
+
+
+@media screen and (max-width: 465px) {
+  .homeContent{
+    /* border: 2px solid white; */
+    font-size: 1.5rem;
+    width: 100vw;
+  }
+
+  .aboutText{
+    height: 15%;
+    /* border: 3px solid pink; */
+  }
+
+  .aboutDescription{
+    flex-direction: column;
+  }
+
+  .aboutDescription img{
+    width: 60%;
+    margin: 10%;
+  }
+
+  .aboutContent p{
+    width: 80vw;
+  }
+
+  #services{
+    height: 220vh;
+  }
+
+  .servicesText{
+    height: 15%;
+    align-content: center;
+  }
+
+  .sercicesCards{
+    height: 80%;
+    flex-direction: column;
+    align-items: space-between;
+  }
+
+  #skills{
+    height: 120vh;
+  }
+
+  .skillText{
+    height: 15%;
+  }
+
+  .skillCard{
+    height: 70%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .skillLeft , .skillRight{
+    width: 90%;
+  }
+
+  .skillRight{
+    padding: 0%;
+  }
+
+  .otherSkillText{
+    /* border: 3px solid blue; */
+    height: 20%;
+  /* align-content: center; */
+  align-items: end;
+    
+  }
+
+  #contact{
+    height: 170vh;
+  }
+
+  .contactText{
+    height: 15%;
+  }
+
+  .contactDetails{
+    height: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .contactLeft , .ContactRight{
+    width: 90%;
+  }
+
+
+  .contactInputs input{
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .inputName{
+  margin-right: 0;
+    
+  }
+
+  .inputSubject{
+  padding: 0px;
+  margin: 0px 0px;
+
+  }
+
+.inputMessage {
+  padding: 0px;
+
+}
+
+
+
+
 }

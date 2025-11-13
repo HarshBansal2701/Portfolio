@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './../App.css';
+import  manuBar  from './../assets/icons8-menu-bar-64.png';
+
 
 const NavBar = () => {
 
@@ -7,7 +9,7 @@ const NavBar = () => {
 
   useEffect(()=>{
     const handleScroll = () =>{
-      if(window.scrollY > 20){
+      if(window.scrollY > 15){
         setScrolled(true);
       }
       else{
@@ -31,6 +33,7 @@ const NavBar = () => {
             <li><a className='navBarList' href="#otherskills">Others</a></li>
             <li><a className='navBarList' href="#contact">Contact</a></li>
         </ul>
+        <img className='menuBar' src= {manuBar} alt="" />
     </div>
   )
 }

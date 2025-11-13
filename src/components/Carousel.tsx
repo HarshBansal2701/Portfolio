@@ -103,7 +103,7 @@ const Carousel = () => {
                 {
                     otherskillsItems.map((item, index)=>{
                         return (
-                            <div className="carouselItem" key={index}  style={{transform: `translateX(-${idx*200}px)` , transition: 'transform 0.5s ease-in-out'}}>
+                            <div className="carouselItem" key={index}  style={{transform: `translateX(-${idx*145}px)` , transition: 'transform 0.5s ease-in-out'}}>
                                 <Card image = {item.image}  tack = {item.tack} message={item.message}/> 
                             </div>
                         )
